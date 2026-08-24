@@ -1,0 +1,126 @@
+.auth-wrap {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.auth-top {
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 380px;
+  padding: 28px 24px;
+  border: 0.5px solid var(--border-secondary);
+  border-radius: 12px;
+  background: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.auth-card h2 {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.auth-card label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.auth-card input {
+  height: 40px;
+  padding: 0 14px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 0.5px solid var(--border-secondary);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.auth-card input:focus-visible {
+  outline: 2px solid var(--text-info);
+  outline-offset: 2px;
+}
+
+.auth-card input::placeholder {
+  color: var(--text-tertiary);
+}
+
+.auth-card button[type="submit"] {
+  height: 40px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent);
+  color: var(--accent-text);
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.auth-card button[type="submit"]:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+.auth-card button[type="submit"]:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.auth-card button[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.auth-switch {
+  font-size: 13px;
+  color: var(--text-tertiary);
+  text-align: center;
+}
+
+.auth-switch button {
+  background: none;
+  border: none;
+  color: var(--text-info);
+  font-size: 13px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.auth-switch button:hover {
+  text-decoration: underline;
+}
+
+.auth-error {
+  font-size: 13px;
+  color: var(--text-danger);
+  background: var(--bg-danger);
+  border: 0.5px solid var(--border-danger);
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+.auth-info {
+  font-size: 13px;
+  color: var(--text-success);
+  background: var(--bg-success);
+  border: 0.5px solid var(--border-success);
+  border-radius: 8px;
+  padding: 8px 12px;
+}

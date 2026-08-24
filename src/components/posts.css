@@ -1,0 +1,228 @@
+.posts-wrap {
+  width: 500px;
+  padding: 20px 24px;
+  margin: 0 auto 20px;
+  border: 0.5px solid var(--border-secondary);
+  border-radius: 12px;
+  background: var(--bg-primary);
+}
+
+.posts-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.posts-toolbar h2 {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-tertiary);
+}
+
+.new-post-button {
+  height: 36px;
+  padding: 0 16px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent);
+  color: var(--accent-text);
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.new-post-button:hover {
+  background: var(--accent-hover);
+}
+
+.new-post-button:active {
+  transform: scale(0.97);
+}
+
+.post-error {
+  width: 100%;
+  margin-bottom: 14px;
+  font-size: 13px;
+  color: var(--text-danger);
+  background: var(--bg-danger);
+  border: 0.5px solid var(--border-danger);
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+.posts-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-tertiary);
+  font-size: 13px;
+  padding: 30px 0;
+}
+
+.posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.post-card {
+  border: 0.5px solid var(--border-tertiary);
+  border-radius: 10px;
+  background: var(--bg-secondary);
+  overflow: hidden;
+  transition: border-color 0.15s;
+}
+
+.post-card:hover {
+  border-color: var(--border-secondary);
+}
+
+.post-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  background: var(--bg-tertiary);
+}
+
+.post-body {
+  padding: 12px 14px;
+}
+
+.post-author {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text-info);
+}
+
+.post-content {
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-primary);
+  overflow-wrap: anywhere;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 0 14px 12px;
+}
+
+.post-actions button {
+  height: 30px;
+  padding: 0 12px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 0.5px solid var(--border-tertiary);
+  background: var(--bg-secondary);
+  color: var(--text-info);
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, opacity 0.15s;
+}
+
+.post-actions button:hover:not(:disabled) {
+  border-color: var(--border-secondary);
+  background: var(--bg-tertiary);
+}
+
+.post-actions button.danger {
+  color: var(--text-danger);
+  border-color: var(--border-danger);
+}
+
+.post-actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 50;
+}
+
+.modal-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 22px 20px;
+  border: 0.5px solid var(--border-secondary);
+  border-radius: 12px;
+  background: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-card h3 {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.modal-card textarea {
+  resize: vertical;
+  min-height: 90px;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-family: inherit;
+  border-radius: 8px;
+  border: 0.5px solid var(--border-secondary);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  outline: none;
+}
+
+.modal-card textarea:focus-visible {
+  outline: 2px solid var(--text-info);
+  outline-offset: 2px;
+}
+
+.modal-card textarea::placeholder {
+  color: var(--text-tertiary);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.modal-actions button {
+  height: 36px;
+  padding: 0 16px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 0.5px solid var(--border-tertiary);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.modal-actions button[type="submit"] {
+  border: none;
+  background: var(--accent);
+  color: var(--accent-text);
+}
+
+.modal-actions button[type="submit"]:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+.modal-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
